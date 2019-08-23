@@ -21,7 +21,12 @@ class Pet extends React.Component {
 
     render() {
         return (
-            <h1>Hello, I am a Pet</h1>
+            <div>
+                <h1>Hello, I am a Pet</h1>
+                    <p>Hunger: { this.state.hunger }</p>
+                    <p>Weight: { this.state.weight }</p>
+                    <p>Happiness: { this.state.happiness }</p>
+            </div>
         )
     }
 }
