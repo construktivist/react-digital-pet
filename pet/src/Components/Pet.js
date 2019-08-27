@@ -1,4 +1,5 @@
 import React from 'react';
+import Feed from './Pet';
 
 class Pet extends React.Component {
     constructor(props) {
@@ -22,10 +23,17 @@ class Pet extends React.Component {
     render() {
         return (
             <div>
-                <h1>Hello, I am a Pet</h1>
+                <div>
+                    <h1>Hello, I am a Pet</h1>
+                </div>
+                <div>
                     <p>Hunger: { this.state.hunger }</p>
                     <p>Weight: { this.state.weight }</p>
                     <p>Happiness: { this.state.happiness }</p>
+                </div>
+                <div>
+                    <Feed eatFood={this.eatFood} food='10' />
+                </div>
             </div>
         )
     }
