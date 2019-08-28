@@ -1,6 +1,7 @@
 import React from 'react';
 import Feed from './Pet/Feed';
 
+
 class Pet extends React.Component {
     constructor(props) {
         super(props);
@@ -32,7 +33,8 @@ class Pet extends React.Component {
                     <p>Happiness: { this.state.happiness }</p>
                 </div>
                 <div>
-                    {/* <Feed eatFood={this.eatFood} food='10' /> */}
+                    <Feed eatFood={this.eatFood} food='10' /> 
+                    {/* <button onClick={() => this.eatFood(10)}>Feed</button> */}
                 </div>
             </div>
         )
