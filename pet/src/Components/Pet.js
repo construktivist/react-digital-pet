@@ -13,7 +13,7 @@ class Pet extends React.Component {
     }
 
     eatFood(food) {
-        console.log(food);
+        console.log('eatFood: ' + food);
         const newHunger = this.state.hunger - food;
         const newWeight = this.state.weight + food;
         this.setState({
@@ -26,7 +26,7 @@ class Pet extends React.Component {
         return (
             <div>
                 <div>
-                    <h1>Hello, I am a Pet</h1>
+                    {/* <h1>Hello, I am a Pet</h1> */}
                 </div>
                 <div>
                     <p>Hunger: { this.state.hunger }</p>
@@ -34,7 +34,8 @@ class Pet extends React.Component {
                     <p>Happiness: { this.state.happiness }</p>
                 </div>
                 <div>
-                    <Feed eatFood={() => this.eatFood()} food={10} /> 
+                    <Feed eatFood={() => this.eatFood(10)} /> 
+
                 </div>
             </div>
         )
