@@ -13,13 +13,30 @@ class Pet extends React.Component {
     }
 
     eatFood(food) {
-        console.log('eatFood: ' + food);
         const newHunger = this.state.hunger - food;
         const newWeight = this.state.weight + food;
         this.setState({
             hunger: newHunger,
             weight: newWeight
         })  
+    }
+
+    exercise(activity) {
+        const newWeight = this.state.weight - activity;
+        const newHappiness = this.state.happiness - activity;
+        this.setState({
+            weight: newWeight,
+            happiness: newHappiness
+        })
+    }
+
+    play(toy) {
+        const newHappiness = this.state.happiness + toy;
+        const newHunger = this.state.hunger + toy;
+        this.setState({
+            happiness: newHappiness,
+            hunger: newHunger
+        })
     }
 
     render() {
