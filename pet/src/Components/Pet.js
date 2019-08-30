@@ -1,5 +1,7 @@
 import React from 'react';
 import Feed from './Pet/Feed';
+import Exercise from './Pet/Exercise'; 
+import Play from './Pet/Play';
 
 
 class Pet extends React.Component {
@@ -12,7 +14,7 @@ class Pet extends React.Component {
         }
     }
 
-    eatFood(food) {
+    feed(food) {
         const newHunger = this.state.hunger - food;
         const newWeight = this.state.weight + food;
         this.setState({
@@ -51,8 +53,9 @@ class Pet extends React.Component {
                     <p>Happiness: { this.state.happiness }</p>
                 </div>
                 <div>
-                    <Feed eatFood={() => this.eatFood(10)} /> 
-
+                    <Feed feed={() => this.feed(10)} />
+                    <Exercise exercise={() => this.exercise(10)} />
+                    <Play play={() => this.play(10)} />
                 </div>
             </div>
         )

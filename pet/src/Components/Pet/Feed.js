@@ -4,7 +4,7 @@ class Feed extends React.Component {
 
     render() {
         return (
-            <button onClick={() => this.props.eatFood()}>Feed</button>
+            <button onClick={() => this.props.feed()}>Feed</button>
         )
     }
 
