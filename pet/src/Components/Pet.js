@@ -1,4 +1,7 @@
 import React from 'react';
+
+import Name from './Pet/Name';
+import Avatar from './Pet/Avatar';
 import Feed from './Pet/Feed';
 import Exercise from './Pet/Exercise'; 
 import Play from './Pet/Play';
@@ -8,6 +11,8 @@ class Pet extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
+            name: 'jill',
+            image: 'https://image.flaticon.com/icons/svg/578/578418.svg',
             hunger: 0,
             weight: 0,
             happiness: 0
@@ -45,7 +50,8 @@ class Pet extends React.Component {
         return (
             <div>
                 <div>
-                    {/* <h1>Hello, I am a Pet</h1> */}
+                    <Name name={this.state.name} />
+                    <Avatar image={this.state.image} /> 
                 </div>
                 <div>
                     <p>Hunger: { this.state.hunger }</p>
