@@ -46,6 +46,12 @@ class Pet extends React.Component {
         })
     }
 
+    componentDidUpdate() {
+        if (this.state.hunger >= 100) {
+            console.log('I am hungry');
+        }
+    }
+
     render() {
         return (
             <div>
