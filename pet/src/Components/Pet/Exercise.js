@@ -3,7 +3,7 @@ import React from 'react';
 class Exercise extends React.Component {
     render() {
         return (
-            <button onClick={()=>this.props.exercise()}>Exercise</button>
+            <button onClick={()=>this.props.exercise(10)}>Exercise</button>
         )
     }
 }

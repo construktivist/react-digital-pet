@@ -19,7 +19,7 @@ class Pet extends React.Component {
         }
     }
 
-    feed(food) {
+    feed = (food) => {
         const newHunger = this.state.hunger - food;
         const newWeight = this.state.weight + food;
         this.setState({
@@ -28,7 +28,7 @@ class Pet extends React.Component {
         })  
     }
 
-    exercise(activity) {
+    exercise = (activity) => {
         const newWeight = this.state.weight - activity;
         const newHappiness = this.state.happiness - activity;
         this.setState({
@@ -37,7 +37,7 @@ class Pet extends React.Component {
         })
     }
 
-    play(toy) {
+    play = (toy) => {
         const newHappiness = this.state.happiness + toy;
         const newHunger = this.state.hunger + toy;
         this.setState({
@@ -65,9 +65,9 @@ class Pet extends React.Component {
                     <p>Happiness: { this.state.happiness }</p>
                 </div>
                 <div>
-                    <Feed feed={() => this.feed(10)} />
-                    <Exercise exercise={() => this.exercise(10)} />
-                    <Play play={() => this.play(10)} />
+                    <Feed feed={this.feed} />
+                    <Exercise exercise={this.exercise} />
+                    <Play play={this.play} />
                 </div>
             </div>
         )
