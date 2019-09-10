@@ -7,7 +7,15 @@ class App extends React.Component {
     render () {
         return (
             <div className="container">
-                <Pet />
+                <div className="row">
+                    <Pet />
+                    <Pet />
+                    <Pet />
+                    <Pet />
+                    <Pet />
+                    <Pet />
+                </div>
+
             </div>
         )
     }

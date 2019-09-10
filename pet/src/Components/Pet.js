@@ -11,7 +11,7 @@ class Pet extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            name: 'jill',
+            name: 'Box',
             image: 'https://image.flaticon.com/icons/svg/578/578418.svg',
             hunger: 0,
             weight: 0,
@@ -54,17 +54,17 @@ class Pet extends React.Component {
 
     render() {
         return (
-            <div>
-                <div>
+            <div id={this.state.name} className="pet-container">
+                <div className="name-avatar">
                     <Name name={this.state.name} />
                     <Avatar image={this.state.image} /> 
                 </div>
-                <div>
+                <div className="stats">
                     <p>Hunger: { this.state.hunger }</p>
                     <p>Weight: { this.state.weight }</p>
                     <p>Happiness: { this.state.happiness }</p>
                 </div>
-                <div>
+                <div className="buttons">
                     <Feed feed={this.feed} />
                     <Exercise exercise={this.exercise} />
                     <Play play={this.play} />

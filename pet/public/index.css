@@ -1,4 +1,40 @@
+.pet-container:nth-child(1n+0){
+    background: lightblue
+}
+
+.pet-container:nth-child(2n+0){
+    background: lightyellow
+}
+
+.pet-container:nth-child(3n+0){
+    background: lightgreen
+}
+
+.pet-container{
+    margin: 5px;
+    padding: 10px;
+    border-radius: 10%;
+}
+
+.name-avatar{
+    text-align: center;
+}
+
 .pet-avatar{
     width: 50px;
     height: 50px;
+}
+
+button{
+    margin: 0 5px;
+}
+
+.btn-primary{
+    border-radius: 10px;
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: #457cb7;
+    border-color: #457cb7;
 }
