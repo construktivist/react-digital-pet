@@ -10,9 +10,19 @@ class Form extends React.Component {
     }
 
     render (){
-        <form>
-            <input type='string' value={this.state.name} id='name' required/>
-            <input type='string' value={this.state.image} id='image' required/>
-        </form>
+        return(
+            <form>
+                <div class="form-group">
+                    <label for="name">Pet Name</label>
+                    <input class="form-control" type='text' value={this.state.name} id='name' required/>
+                </div>
+                <div class="form-group">
+                    <label for="image">Pet Image</label>
+                    <input class="form-control" type='url' value={this.state.image} id='image' required/>
+                </div>
+            </form>
+        )
     }
 }
+
+export default Form;
