@@ -16,17 +16,22 @@ class Form extends React.Component {
         })
     }
 
+    handleSubmit = (event) => {
+        console.log('Submit clicked');
+    }
+
     render (){
         return(
-            <form>
-                <div class="form-group">
-                    <label for="name">Pet Name</label>
-                    <input class="form-control" type='text' value={this.state.name} onChange={this.handleChange} id='name' name='name' required/>
+            <form onSubmit={this.handleSubmit}>
+                <div className="form-group">
+                    <label>Pet Name</label>
+                    <input className="form-control" type='text' value={this.state.name} onChange={this.handleChange} id='name' name='name' required/>
                 </div>
-                <div class="form-group">
-                    <label for="image">Pet Image</label>
-                    <input class="form-control" type='url' value={this.state.image} onChange={this.handleChange} id='image' name='image' required/>
+                <div className="form-group">
+                    <label>Pet Image</label>
+                    <input className="form-control" type='url' value={this.state.image} onChange={this.handleChange} id='image' name='image' required/>
                 </div>
+                <input className="btn btn-primary" type="submit" value="Create Pet" />
             </form>
         )
     }
