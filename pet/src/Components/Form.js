@@ -17,7 +17,9 @@ class Form extends React.Component {
     }
 
     handleSubmit = (event) => {
-        console.log('Submit clicked');
+        console.log(this.state.name);
+        console.log(this.state.image);
+        event.preventDefault();
     }
 
     render (){
@@ -31,7 +33,7 @@ class Form extends React.Component {
                     <label>Pet Image</label>
                     <input className="form-control" type='url' value={this.state.image} onChange={this.handleChange} id='image' name='image' required/>
                 </div>
-                <input className="btn btn-primary" type="submit" value="Create Pet" />
+                <input className="btn btn-primary" type="submit" onClick={this.handleSubmit} value="Create Pet" />
             </form>
         )
     }
