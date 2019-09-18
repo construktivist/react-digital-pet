@@ -17,8 +17,12 @@ class Form extends React.Component {
     }
 
     handleSubmit = (event) => {
-        console.log(this.state.name);
-        console.log(this.state.image);
+        const pet = {
+            name: this.state.name,
+            image: this.state.image,
+        }
+        localStorage.setItem('pets', JSON.stringify(pet));
+        console.log(localStorage.pets);
         event.preventDefault();
     }
 
