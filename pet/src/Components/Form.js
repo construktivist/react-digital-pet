@@ -22,7 +22,6 @@ class Form extends React.Component {
             image: this.state.image,
         }
         localStorage.setItem('pets', JSON.stringify(pet));
-        console.log(localStorage.pets);
         event.preventDefault();
     }
 
