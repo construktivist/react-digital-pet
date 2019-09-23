@@ -16,9 +16,13 @@ class Form extends React.Component {
         })
     }
 
+    handleSubmit = (event) => {
+        console.log("SUBMIT");
+    }
+
     render (){
         return(
-            <form onSubmit={this.props.addPet(this.state.name, this.state.image)}>
+            <form onSubmit={this.handleSubmit}>
                 <div className="form-group">
                     <label>Pet Name</label>
                     <input className="form-control" type='text' value={this.state.name} onChange={this.handleChange} id='name' name='name' required/>
