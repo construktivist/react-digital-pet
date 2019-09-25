@@ -18,7 +18,6 @@ class Form extends React.Component {
 
     handleSubmit = (event) => {
         console.log("SUBMIT");
-        event.preventDefault();
         this.props.addPet(this.state.name, this.state.image);
     }
 

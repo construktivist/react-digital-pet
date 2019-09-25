@@ -11,9 +11,9 @@ class Pet extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            hunger: 0,
-            weight: 0,
-            happiness: 0
+            hunger: 50,
+            weight: 50,
+            happiness: 50
         }
     }
 
@@ -42,6 +42,17 @@ class Pet extends React.Component {
             happiness: newHappiness,
             hunger: newHunger
         })
+    }
+
+    updateStats = () => {
+        const newHunger = this.state.hunger + 1;
+        this.setState({
+            hunger: newHunger
+        }) 
+    }
+
+    componentDidMount() {
+        setInterval(this.updateStats, 1000)
     }
 
     componentDidUpdate() {
