@@ -46,8 +46,12 @@ class Pet extends React.Component {
 
     updateStats = () => {
         const newHunger = this.state.hunger + 1;
+        const newWeight = this.state.weight - 1;
+        const newHappiness = this.state.happiness + 1;
         this.setState({
-            hunger: newHunger
+            hunger: newHunger,
+            weight: newWeight,
+            happiness: newHappiness
         }) 
     }
 
