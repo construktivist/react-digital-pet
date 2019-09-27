@@ -5,6 +5,7 @@ import Avatar from './Pet/Avatar';
 import Feed from './Pet/Feed';
 import Exercise from './Pet/Exercise'; 
 import Play from './Pet/Play';
+import Message from './Pet/Message';
 
 
 class Pet extends React.Component {
@@ -51,7 +52,8 @@ class Pet extends React.Component {
         this.setState({
             hunger: newHunger,
             weight: newWeight,
-            happiness: newHappiness
+            happiness: newHappiness,
+            message: 'Hello'
         }) 
     }
 
@@ -61,7 +63,10 @@ class Pet extends React.Component {
 
     componentDidUpdate() {
         if (this.state.hunger >= 100) {
-            console.log('I am hungry');
+            const newMessage = "I'm hungry!";
+            this.setState({
+                message: newMessage
+            })
         }
     }
 
@@ -82,6 +87,7 @@ class Pet extends React.Component {
                     <Exercise exercise={this.exercise} />
                     <Play play={this.play} />
                 </div>
+                <Message message={this.message}/>
             </div>
         )
     }
