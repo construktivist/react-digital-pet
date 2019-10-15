@@ -1,12 +1,9 @@
 import React from 'react';
 
-class Name extends React.Component {
-
-    render() {
+function Name(props) {
         return (
-            <h3>{this.props.name.toUpperCase()}</h3>
+            <h3>{props.name.toUpperCase()}</h3>
         )    
-    }
 }
 
 export default Name;

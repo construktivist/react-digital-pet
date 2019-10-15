@@ -8,7 +8,6 @@ class App extends React.Component {
     constructor() {
         super();
         let pets = localStorage.getItem('pets');
-        console.log(pets);
         pets ? pets = JSON.parse(pets) : pets = [];
         this.state = {
             pets: pets,

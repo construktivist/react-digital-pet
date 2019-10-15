@@ -1,11 +1,9 @@
 import React from 'react';
 
-class Play extends React.Component {
-    render () {
+function Play(props) {
         return(
-            <button className="btn-primary" onClick={() => this.props.play(5)}>Play</button>
+            <button className="btn-primary" onClick={() => props.play(5)}>Play</button>
         )
-    }
 }
 
 export default Play;

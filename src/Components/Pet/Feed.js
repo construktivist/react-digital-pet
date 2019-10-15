@@ -1,13 +1,9 @@
 import React from 'react';
 
-class Feed extends React.Component {
-
-    render() {
+function Feed(props){
         return (
-            <button className="btn-primary" onClick={() => this.props.feed(5)}>Feed</button>
+            <button className="btn-primary" onClick={() => props.feed(5)}>Feed</button>
         )
-    }
-
 }
 
 export default Feed;

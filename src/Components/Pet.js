@@ -58,7 +58,7 @@ class Pet extends React.Component {
     }
 
     componentDidMount() {
-        setInterval(this.updateStats, 1000)
+        // setInterval(this.updateStats, 1000)
     }
 
     componentDidUpdate() {

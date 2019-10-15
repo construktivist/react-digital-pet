@@ -1,11 +1,8 @@
 import React from 'react';
-
-class Message extends React.Component {
-    render(){
+function Message(props) {
         return (
-            <div className="message"><p>{this.props.message}</p></div>
+            <div className="message"><p>{props.message}</p></div>
         )
-    }
 }
 
 export default Message;

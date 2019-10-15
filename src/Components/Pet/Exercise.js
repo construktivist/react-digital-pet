@@ -1,11 +1,9 @@
 import React from 'react';
 
-class Exercise extends React.Component {
-    render() {
+function Exercise(props) {
         return (
-            <button className="btn-primary" onClick={()=>this.props.exercise(5)}>Exercise</button>
+            <button className="btn-primary" onClick={()=> props.exercise(5)}>Exercise</button>
         )
-    }
 }
 
 export default Exercise;

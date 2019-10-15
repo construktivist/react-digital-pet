@@ -1,11 +1,9 @@
 import React from 'react';
 
-class Avatar extends React.Component {
-    render() {
+function Avatar(props) {
         return (
-            <img className="pet-avatar" src={this.props.image} alt="Pet avatar"/>
+            <img className="pet-avatar" src={props.image} alt="Pet avatar"/>
         )
-    }
 }
 
 export default Avatar;
