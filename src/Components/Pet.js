@@ -14,7 +14,9 @@ class Pet extends React.Component {
         this.state = {
             hunger: 50,
             weight: 50,
-            happiness: 50
+            happiness: 50,
+            message: 'Greetings',
+            hungerBool: false,
         }
     }
 
@@ -53,19 +55,19 @@ class Pet extends React.Component {
             hunger: newHunger,
             weight: newWeight,
             happiness: newHappiness,
-            message: 'Hello'
         }) 
     }
 
     componentDidMount() {
-        // setInterval(this.updateStats, 1000)
+        setInterval(this.updateStats, 1000)
     }
 
     componentDidUpdate() {
-        if (this.state.hunger >= 100) {
+        if (this.state.hunger >= 100 && this.state.hungerBool === false) {
             const newMessage = "I'm hungry!";
             this.setState({
-                message: newMessage
+                message: newMessage,
+                hungerBool: true
             })
         }
     }
@@ -87,7 +89,7 @@ class Pet extends React.Component {
                     <Exercise exercise={this.exercise} />
                     <Play play={this.play} />
                 </div>
-                <Message message={this.message}/>
+                <Message message={this.state.message} />
             </div>
         )
     }
