@@ -14,8 +14,10 @@ class App extends React.Component {
             }
     }
 
-    addPet = (name, image) => {
+    addPet = (id, name, image) => {
+
         const pet = {
+            id: id,
             name: name,
             image: image
         }
@@ -26,13 +28,14 @@ class App extends React.Component {
     }
 
     render () {
+        
         return (
             <div className="container">
                 <div className="container">
                     <Form addPet={this.addPet} />
                 </div>
                 <div className="row">
-                    {this.state.pets.map((pet) => <Pet name={pet.name} key={pet.name} image={pet.image} />)}
+                    {this.state.pets.map((pet) => <Pet name={pet.name} key={pet.id} image={pet.image} />)}
                 </div>
 
             </div>

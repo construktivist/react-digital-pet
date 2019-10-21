@@ -4,6 +4,7 @@ class Form extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
+            id: Math.floor(Math.random() * 1001),
             name: '',
             image: '',
         }
@@ -17,8 +18,7 @@ class Form extends React.Component {
     }
 
     handleSubmit = (event) => {
-        console.log("SUBMIT");
-        this.props.addPet(this.state.name, this.state.image);
+        this.props.addPet(this.state.id, this.state.name, this.state.image);
     }
 
     render (){
