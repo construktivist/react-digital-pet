@@ -27,6 +27,7 @@ class App extends React.Component {
         localStorage.setItem('pets', JSON.stringify(pets));
     }
 
+
     render () {
         
         return (
@@ -35,7 +36,14 @@ class App extends React.Component {
                     <Form addPet={this.addPet} />
                 </div>
                 <div className="row">
-                    {this.state.pets.map((pet) => <Pet name={pet.name} key={pet.id} image={pet.image} />)}
+                    {this.state.pets.map((pet) => 
+                        <Pet 
+                            key={pet.id} 
+                            id={pet.id} 
+                            name={pet.name} 
+                            image={pet.image}    
+                            />
+                    )}
                 </div>
 
             </div>

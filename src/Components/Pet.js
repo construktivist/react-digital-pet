@@ -5,6 +5,7 @@ import Avatar from './Pet/Avatar';
 import Feed from './Pet/Feed';
 import Exercise from './Pet/Exercise'; 
 import Play from './Pet/Play';
+import Delete from './Pet/Delete';
 import Message from './Pet/Message';
 
 
@@ -58,6 +59,10 @@ class Pet extends React.Component {
         }) 
     }
 
+    deletePet = (pet) => {
+        console.log('Delete: ' + pet);
+    }
+
     componentDidMount() {
         setInterval(this.updateStats, 1000)
     }
@@ -88,6 +93,7 @@ class Pet extends React.Component {
                     <Feed feed={this.feed} />
                     <Exercise exercise={this.exercise} />
                     <Play play={this.play} />
+                    <Delete id={this.props.id} delete={this.deletePet} />
                 </div>
                 <Message message={this.state.message} />
             </div>
