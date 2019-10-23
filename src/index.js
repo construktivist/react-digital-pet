@@ -27,6 +27,21 @@ class App extends React.Component {
         localStorage.setItem('pets', JSON.stringify(pets));
     }
 
+    deleteAndUpdate = (id) => {
+        
+        let pets = this.state.pets;
+        console.log(pets);
+
+        for (const pet of pets) {
+            if(pet.id === id) {
+                console.log(true);
+                const newPets = pets.splice(pet);
+                console.log(newPets);
+                // localStorage.setItem('pets', JSON.stringify(pets));
+            }
+        }
+    }
+
 
     render () {
         
@@ -41,7 +56,8 @@ class App extends React.Component {
                             key={pet.id} 
                             id={pet.id} 
                             name={pet.name} 
-                            image={pet.image}    
+                            image={pet.image}  
+                            deleteAndUpdate={this.deleteAndUpdate}  
                             />
                     )}
                 </div>

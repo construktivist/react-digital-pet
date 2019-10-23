@@ -61,6 +61,9 @@ class Pet extends React.Component {
 
     deletePet = (pet) => {
         console.log('Delete: ' + pet);
+
+        this.props.deleteAndUpdate(pet);
+
     }
 
     componentDidMount() {
