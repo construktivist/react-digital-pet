@@ -59,12 +59,12 @@ class Pet extends React.Component {
         }) 
     }
 
-    deletePet = (pet) => {
-        console.log('Delete: ' + pet);
+    // deletePet = (pet) => {
+    //     console.log('Delete: ' + pet);
 
-        this.props.deleteAndUpdate(pet);
+    //     this.props.deleteAndUpdate(pet);
 
-    }
+    // }
 
     componentDidMount() {
         setInterval(this.updateStats, 1000)
@@ -96,7 +96,7 @@ class Pet extends React.Component {
                     <Feed feed={this.feed} />
                     <Exercise exercise={this.exercise} />
                     <Play play={this.play} />
-                    <Delete id={this.props.id} delete={this.deletePet} />
+                    <Delete id={this.props.id} delete={this.props.deleteAndUpdate} />
                 </div>
                 <Message message={this.state.message} />
             </div>

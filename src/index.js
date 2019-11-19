@@ -29,13 +29,15 @@ class App extends React.Component {
 
     deleteAndUpdate = (id) => {
 
+        const newPets = this.state.pets.filter(pet => pet.id !== id);
+        console.log(newPets);
         this.setState({
-            pets: this.state.pets.filter(pet => pet.id !== id)
+            pets: newPets
         })
-
+        console.log(this.state.pets);
         let pets = this.state.pets;
         console.log(pets);
-        localStorage.setItem('pets', JSON.stringify(pets))
+        localStorage.setItem('pets', JSON.stringify(newPets))
 
     }
 
